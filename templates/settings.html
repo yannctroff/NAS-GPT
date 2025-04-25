@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Paramètres</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div class="container">
+  <h1>⚙️ Paramètres</h1>
+
+  <!-- Changement de mot de passe -->
+  <form action="/change-password" method="POST">
+    <h3>🔐 Changer le mot de passe</h3>
+    <input type="password" name="current_password" placeholder="Mot de passe actuel" required>
+    <input type="password" name="new_password" placeholder="Nouveau mot de passe" required>
+    <input type="submit" value="Mettre à jour le mot de passe">
+  </form>
+
+  <!-- Thème clair/sombre -->
+  <form action="/change-theme" method="POST">
+    <h3>🌗 Mode d'affichage</h3>
+    <select name="theme">
+      <option value="light">Clair</option>
+      <option value="dark">Sombre</option>
+    </select>
+    <input type="submit" value="Appliquer le thème">
+  </form>
+
+  <!-- Police d'écriture -->
+  <form action="/change-font" method="POST">
+    <h3>🔤 Police d'écriture</h3>
+    <select name="font">
+      <option value="Segoe UI">Segoe UI</option>
+      <option value="Arial">Arial</option>
+      <option value="Verdana">Verdana</option>
+      <option value="Courier New">Courier New</option>
+    </select>
+    <input type="submit" value="Changer la police">
+  </form>
+
+  <a href="/">⬅ Retour à l'accueil</a>
+</div>
+</body>
+</html>

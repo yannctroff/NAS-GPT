@@ -1,0 +1,135 @@
+/* Style général */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #2c4157;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Titre principal */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Fichiers */
+.file-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.file-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.file-list li:last-child {
+    border-bottom: none;
+}
+
+/* Boutons */
+button,
+input[type="submit"] {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Champs formulaire */
+input[type="text"],
+input[type="password"],
+input[type="file"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+/* Formulaires */
+form {
+    margin-top: 20px;
+}
+
+/* Liens */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Boutons de menu */
+.menu-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.menu-button {
+    background-color: #2ecc71;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    min-width: 160px;
+    text-align: center;
+}
+
+.menu-button:hover {
+    background-color: #27ae60;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .file-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-button {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    button,
+    input[type="submit"] {
+        width: 100%;
+    }
+}

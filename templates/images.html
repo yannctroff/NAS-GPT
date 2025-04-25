@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Mes photos</h1>
+
+<ul class="file-list">
+    {% for image in images %}
+    <li>
+        <img src="{{ url_for('uploaded_file', filename=image) }}" alt="{{ image }}" width="100">
+        <form action="{{ url_for('delete_file', filename=image) }}" method="POST">
+            <button type="submit">Supprimer</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+
+<form action="{{ url_for('upload_file') }}" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit" value="Télécharger une image">
+</form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Bienvenue sur ton NAS, {{ session['username'] }}</h1>
+
+<div class="menu-buttons">
+    <a href="{{ url_for('documents') }}" class="menu-button">📄 Mes documents</a>
+    <a href="{{ url_for('images') }}" class="menu-button">🖼️ Mes photos</a>
+    <a href="{{ url_for('videos') }}" class="menu-button">🎬 Mes vidéos</a>
+    <a href="{{ url_for('settings') }}" class="menu-button">⚙️ Paramètres</a>
+</div>
+
+<a href="{{ url_for('logout') }}">Se déconnecter</a>
+{% endblock %}

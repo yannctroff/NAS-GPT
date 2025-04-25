@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Inscription</h1>
+
+{% if error %}
+    <p style="color: red;">{{ error }}</p>
+{% endif %}
+
+<form action="{{ url_for('signup') }}" method="POST">
+    <label for="username">Nom d'utilisateur :</label>
+    <input type="text" name="username" required>
+
+    <label for="password">Mot de passe :</label>
+    <input type="password" name="password" required>
+
+    <label for="confirm_password">Confirmer le mot de passe :</label>
+    <input type="password" name="confirm_password" required>
+
+    <input type="submit" value="S'inscrire">
+</form>
+
+<p>Déjà un compte ? <a href="{{ url_for('login') }}">Se connecter</a></p>
+{% endblock %}
