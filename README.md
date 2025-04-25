@@ -22,7 +22,7 @@ pip install flask
 ```
 ## 🏃‍♂️‍➡️ Lancement de l'application
 
-Éxécuter la commande suivante
+Exécuter la commande suivante
 ```bash
 python app.py
 ```
